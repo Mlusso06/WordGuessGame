@@ -32,6 +32,7 @@
     <div class="col"></div>
     <!-- This box will contain the Game Wins, Guesses count-->
     <div class="col box1">
+        
         <p id="winsByUser"> 00</p>
         <br>
         <P id="guessByUser"> 12</P>
@@ -41,10 +42,14 @@
     </div>
     <!-- This box will contain the Hidden word for the game for the user to pick-->
     <div class="col box1">
+        <!-- this is restart button for the game, it will not relode the wins, but it will choose a new word-->
         <button id="startBtn" onclick="startGame">Start Word Guess</button>
+        <p id="secretWord">
+            
+        </p>
         </div>
         <div class="col">
-            <p id="secretWord"></p>
+            
         </div>
 </div>
 </div>

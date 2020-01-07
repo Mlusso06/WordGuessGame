@@ -34,22 +34,29 @@ img {
     width: 500px;
 }
 
+/* adding a box for the wins */
 #winsByUser {
     margin-top: 50px;
     color: white;
     border: 2px solid orange;
     height: auto;
 }
-
+/* adding a box for the guess by the user */
 #guessByUser {
     color: white;
     border: 2px solid orange;
 }
-
+/* adding a box for the wrong letters by the user */
 #wrongGuess {
     color: white;
     border: 2px solid orange;
     height: auto;
+}
+/* adding some spacing for the secret word */
+
+#secretWord {
+
+    margin-top: 30px;
 }
 
 @media only screen and (max-width: 450px) {

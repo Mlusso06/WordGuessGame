@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var getRandomNflWord = function () {
         var nflWords = ["catch", "touchdown", "football", "fullback", "running", "quarterback", "titans", "cointoss", "deadball", "defence", "offence", "placekick", "huddle", "packers", "texans", "radiers", "seahawks", "interception", "turnover", "kickoff", "touchback", "passer", "pitch", "possession", "forwardpass"];
 
-
-
         //function word_picker() {
         var randWord, endWord;
         randWord = Math.floor(Math.random() * nflWords.length);
@@ -29,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener('keyup', (event) => {
         keyword = event.key;
         console.log(keyword)
-        
+        // for loop to run throught the word and check it against the key stroke
         for (var i = 0; i < secret_word.length; i++) {
             if (secret_word[i] === keyword) {
-                //change the display to reveal
+                //change the display to reveal the letters in the word
                 new_display_word += keyword;
                 document.getElementById("secretWord").innerHTML = "The Current word is: " + new_display_word;
                 //dont want update if they guessed wrong => add 1 mistake and record the mistake
@@ -42,12 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // display the secret word on the Html page with _____ to show the # of letters in the hint "should look like _ _ _ _ _"
 
-    //user guessing an a
-
-    // display the secret word on the Html page
-
-    document.getElementById("secretWord").innerHTML = "The Current word is: " + new_display_word;
+    document.getElementById("secretWord").innerHTML = "The Current word is: " + display_word;
 
 
     // checking to see the function returns a random Nfl word //
