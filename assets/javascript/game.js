@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // display the secret word on the Html page with _____ to show the # of letters in the hint "should look like _ _ _ _ _"
 
     document.getElementById("secretWord").innerHTML = "The Current word is: " + display_word;
+// Need code to check against the secret word, and then if they are not in the word it should display in the "wrongletter" on the html box
+
 
 
     // checking to see the function returns a random Nfl word //

@@ -32,12 +32,16 @@
     <div class="col"></div>
     <!-- This box will contain the Game Wins, Guesses count-->
     <div class="col box1">
-        
-        <p id="winsByUser"> 00</p>
+        <!-- this should be pulled by a getElementbyId and display the wins counter, and then as the game progresses, it will continue to count up ++-->
+        <p id="winsByUser"> Wins by user [00]</p>
         <br>
-        <P id="guessByUser"> 12</P>
+        <!-- this will also use a function and be called by a getElement that will start off with a display of 12, but count down until 0 -->
+        <P id="guessByUser"> Number of guesses left [12]</P>
         <br>
-        <p id="wrongGuess"> a, b, c</p>
+        <!-- this should display wrong letters-->
+        <p id="wrongGuess"> Wrong Letters
+            [a, b, c]
+        </p>
         
     </div>
     <!-- This box will contain the Hidden word for the game for the user to pick-->
