@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         display_word += '_';
     }
 
+    // intitalize the new_display word, so that I will not see the ---- after typing the "good letters"
     //Capture the user's guess by letters pressed, and display the letters
     document.addEventListener('keyup', (event) => {
         keyword = event.key;
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (var i = 0; i < secret_word.length; i++) {
             if (secret_word[i] === keyword) {
                 //change the display to reveal the letters in the word
+                // prevent the where the _ _ after typing
                 new_display_word += keyword;
                 document.getElementById("secretWord").innerHTML = "The Current word is: " + new_display_word;
                 //dont want update if they guessed wrong => add 1 mistake and record the mistake

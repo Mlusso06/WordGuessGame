@@ -55,6 +55,7 @@ img {
 /* adding some spacing for the secret word */
 
 #secretWord {
+    letter-spacing: 0.4em;
 
     margin-top: 30px;
 }
