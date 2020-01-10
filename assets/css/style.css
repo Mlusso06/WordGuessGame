@@ -4,6 +4,10 @@ body html {
 }
 
 /* adding the image to the body, and aligning the text and color of text */
+.row {
+    margin-top: 50px;
+}
+
 
 body {
     background-image: url("../images/backGround.jpg");

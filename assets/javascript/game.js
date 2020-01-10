@@ -8,9 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var corLet = [];
     var wrongLet = [];
     var winsByUser = 0;
-    var guessByUser = 12;
+    var guessByUser = 0;
+// variables that will display wins and chances
+    var winsText = document.getElementById("winsByUser");
+    var chancesText = document.getElementById("guessByUser");
+
+
     // Nfl words to use for Football Hangman //
-    var getRandomNflWord = function () {
+
+    var getRandomNflWord = function run() {
         var nflWords = ["catch", "touchdown", "football", "fullback", "running", "quarterback", "titans", "cointoss", "deadball", "defence", "offence", "placekick", "huddle", "packers", "texans", "radiers", "seahawks", "interception", "turnover", "kickoff", "touchback", "passer", "pitch", "possession", "forwardpass"];
 
         //function word_picker() 
@@ -30,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // intitalize the new_display word, so that I will not see the ---- after typing the "good letters"
     //Capture the user's guess by letters pressed, and display the letters
     document.addEventListener('keyup', (event) => {
-
         keyword = event.key;
         // this is to check if the user is a correct 
         if (secret_word.indexOf(keyword) > -1) {
@@ -52,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             document.getElementById("secretWord").innerHTML = "The Current word is: " + display_word.join('');
 
-            if (display_word.join(' ') === secret_word) {
+            if(display_word.join(' ') == secret_word) {
                 // I want to change the alert to a ++ to the var wins by user
-                alert('you Win');
+                winsByUser++;
             }
         }
         else {
@@ -62,8 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(wrongLet);
             // display the wrong letters for that secret word
             document.getElementById("wrongGuess").innerHTML = "Wrong Guesses: " + wrongLet.join(' ');
+            guessByUser++;
         }
         console.log(keyword)
+
+        winsText.textContent = "wins: " + winsByUser;
+        chancesText.textContent = "Number of chances used out of 12: " + guessByUser;
 
     });
 
@@ -74,29 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // checking to see the function returns a random Nfl word //
     console.log(secret_word);
     console.log(display_word);
-
-    // We want to start the guessing game with 0 wins, and 12 guesses for the user
-    var winsByUser = 0;
-    var guessByUser = 12;
-
-    // When the user presses the "Start Game button" the run the randome word generator 
-    // function startGame() {
-
-
-
-    // creating a var to hold the text for the wins and guesses
-    // var winsText = document.getElementById("winsByUser");
-
-    //display the wins and guesses
-    // winsText.textContent = "User Wins:" + winsByUser;
-    // }
-
-    // This is to update the wins if user guesses correctly
-    // function userWins() {
-    //     document.querySelector("#winsByUser").innerHTML = "Score: " + winsByUser;
-    //   }
-
-    //   userWins();
-
+    
 
 });
